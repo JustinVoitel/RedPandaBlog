@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Survey</title>
+    <link rel="stylesheet" href="../css">
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="../img/header-logo.png" alt="nav-panda">
+            <h1>Red Panda Blog</h1>
+            <ul>
+                <li><a href="../index.html">Posts</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="recommendations.html">Recommendations</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Did you like the recent post</legend>
+                <label for="yes"> Yes</label>
+                <input type="radio" name="yes" id="yes"/>
+                <label for="no" >No</label>
+                <input type="radio" name="no" id="no">
+            </fieldset>
+            <fieldset>
+                <legend>What Post do you want to see next ?</legend>
+                <label for="design">Skateboard Designs</label>
+                <input type="checkbox" name="design" id="design"/>
+                <label for="sneaker">Sneaker</label>
+                <input type="checkbox" name="sneaker" id="sneaker">
+                <label for="tips">Production Tips</label>
+                <input type="checkbox" name="tips" id="tips">
+            </fieldset>
+            <fieldset>
+                <legend>What Post do you want to see next ?</legend>
+                <label for="fName">First Name</label>
+                <input type="text" name="fName" id="fName"/>
+                <label for="email" >Email</label>
+                <input type="text" name="email" id="email"/>
+            </fieldset>
+            <input type="submit" name="submit_form"/>
+        </form>
+    </main>
+</body>
+</html>
