@@ -4,23 +4,40 @@
 <head>
   <meta charset="utf-8">
   <title>Red Panda Blog</title>
+  <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
   <link rel="stylesheet" type="text/css" href="css"/>
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
 
 <body>
   <header>
-    <nav>
+    <nav id="open">
       <img src="img/header-logo.png" alt="nav-panda">
       <h1>Red Panda Blog</h1>
-      <ul>
+      <ul id="nav">
         <li><a href="index.html">Posts</a></li>
         <li><a href="html/about.html">About Us</a></li>
         <li><a href="html/recommendations.html">Recommendations</a></li>
       </ul>
+      <div>
+        <a href="#open">Menu</a>
+        <a href="#close">X</a>
+      </div>
+      <div id="mobileMenu">
+        <ul>
+          <li><a href="index.html">Posts</a></li>
+          <li><a href="html/about.html">About Us</a></li>
+          <li><a href="html/recommendations.html">Recommendations</a></li>
+        </ul>
+      </div>
     </nav>
+    <img id="banner" src="img/banner.png" alt="banner">
   </header>
-    <main>
+    <main id="block">
+      <aside>
+        <div><a href="#inline">inline</a></div>
+        <div><a href="#block">block</a></div>
+      </aside>
       <section class="Posts">
           <h2>Blog des Tages</h2>
           <article>
@@ -42,24 +59,24 @@
       </section>
 
       <section class="Posts">
-        <h2>Street Art</h2>
-        <article>
-          <h4>Cong,Justin</h4>
-          <h5>03.05.2018</h5>
-          <img src="img/pf_2.png" alt="blogfoto1">
-          <p>Als Streetart (auch: Street Art, seltener, da missverständlich Straßenkunst; vgl. dort) werden verschiedene, meist nichtkommerzielle Formen von Kunst im öffentlichen Raum bezeichnet, die nach der Absicht der Verursacher durchaus dauerhaft dort verbleiben sollten.</p>
-        </article>
-      </section>
+         <h2>Street Art</h2>
+         <article>
+           <h4>Cong,Justin</h4>
+           <h5>03.05.2018</h5>
+           <img src="img/pf_2.png" alt="blogfoto1">
+           <p>Als Streetart (auch: Street Art, seltener, da missverständlich Straßenkunst; vgl. dort) werden verschiedene, meist nichtkommerzielle Formen von Kunst im öffentlichen Raum bezeichnet, die nach der Absicht der Verursacher durchaus dauerhaft dort verbleiben sollten.</p>
+         </article>
+       </section>
 
-      <section class="Posts">
-        <h2>Verstärkungsfasern im Überblick </h2>
-        <article>
-          <h4>Cong,Justin</h4>
-          <h5>03.05.2018</h5>
-          <img src="img/pf_3.png" alt="blogfoto1">
-          <p>Die Fibertech Konstruktion aus dem Hause EMillionbesteht aus sieben Lagen Ahornholz und einer zusätzlichen Glasfaser-Schicht als Top Layer. Das Ganze sorgt für eine erhöhte Lebensdauer und länger anhaltenden Pop.</p>
-        </article>
-      </section>
+       <section class="Posts">
+         <h2>Verstärkungsfasern im Überblick </h2>
+         <article>
+           <h4>Cong,Justin</h4>
+           <h5>03.05.2018</h5>
+           <img src="img/pf_3.png" alt="blogfoto1">
+           <p>Die Fibertech Konstruktion aus dem Hause EMillionbesteht aus sieben Lagen Ahornholz und einer zusätzlichen Glasfaser-Schicht als Top Layer. Das Ganze sorgt für eine erhöhte Lebensdauer und länger anhaltenden Pop.</p>
+         </article>
+       </section>
     </main>
     <footer>
       <p>Please fill out this survey to improve our blog!: <span><a href="html/survey.html">Survey</a></span></p>

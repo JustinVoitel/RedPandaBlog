@@ -1,10 +1,24 @@
 /*Normalizing to have same default settings in every browser!*/
-*,html {
+/*Ich habe Normalize als CSS Reset Stylesheet verwendet,,
+da nur die Elemente verändert, die eine Standartisierung benötigen
+und das in einer modernen Art und Weise*/
+
+
+* {
     color: #222;
     margin:0;
     padding:0;
-    text-align: center;
+    font-size: 100%;
+}
+
+html{
     font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+img{
+    max-width: 100%;
 }
 
 a{
@@ -15,9 +29,8 @@ ul li{
 }
 
 a:hover{
-    color:orange;
+    color:rgba(255,162,0,1);
 }
-
 
 /*******HEADER*********/
 
@@ -28,9 +41,19 @@ nav {
     width:100%;
     height:50px;
     text-align: center;
+    /*bessere Möglichkeit finden*/
     line-height: 50px;
     background-color: rgba(0,0,0,0.8);
 }
+
+
+ header #banner{
+    width: 100%;
+}
+ header h1{
+     font-size: 1.75rem;
+     margin:0;
+ }
 
 nav ul li, nav img, nav h1{
     float:left;
@@ -38,27 +61,101 @@ nav ul li, nav img, nav h1{
 
 nav h1, nav ul li a{
     margin-left:10px;
-    color: #f5f5f5;
+    color: rgba(245,245,245,1);
 }
 
 nav img{
-    width:75px;
+    width: 4%;
+    min-width:50px;
 }
+
+
+/*Mobile Menu*/
+#mobileMenu{
+    height:0;
+    overflow: hidden;
+    display:block;
+    width: 100%;
+    transition: 0.3s all ease-out;
+    opacity: 0;
+
+}
+
+#mobileMenu ul li{
+    display:block;
+    float:inherit;
+    background-color: rgba(34,34,34,1);
+}
+
+#open:target #mobileMenu{
+    height:200px;
+    opacity:1;
+}
+
+[href="#close"]{
+    display:none;
+    color:rgba(255,255,255,1);
+    float:right
+}
+
+#nav{
+    display:none;
+}
+
+[href="#open"]{
+    color:rgba(255,255,255,1);
+    float:right;
+}
+
+#open:target [href="#close"] {
+    display:block
+}
+
+#open:target [href="#open"]{
+    display:none;
+}
+
+
+
 
 /*******POSTS MAIN*********/
 
 main{
     margin-top:100px;
-    width: 100%;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
 
+header{
+    grid-column: 1/7;
+}
+
+main section:nth-of-type(odd){
+    grid-column: 1/7;
+    grid-gap: 10px;
+
+}
+main section:nth-of-type(even){
+    grid-column: 1/7;
+    grid-gap: 10px;
+}
+
+aside{
+    grid-column: 4/5;
+}
+aside div{
+    display:inline-block;
+    border: 1px solid rgba(255,69,0,1);
+}
+
+#block:target section{
+    grid-column: 1/7;
 }
 
 .Posts{
-    text-align: center;
     border-radius: 10px;
-    width:650px;
-    background-color: #fafafa;
-    margin:50px auto
+    background-color: rgba(250,250,250,1);
+    margin:10px
 }
 
 .Posts article p {
@@ -68,18 +165,18 @@ main{
 }
 .Posts h2{
     padding:20px;
-    font-size:30px
+    font-size:2.5rem;
 }
 
 .Posts article h4, article h5{
     text-align: right;
     font-style: italic;
-    color: #c8c8c8;
+    color: rgba(200,200,200,1);
     margin:10px
 }
 
 .Posts article img{
-    width:500px;
+    max-width:500px;
 }
 
 /*********ABOUT*********/
@@ -98,11 +195,11 @@ main{
     text-align: center;
     border-radius: 10px;
     width:650px;
-    background-color: #fafafa;
+    background-color:rgba(200,200,200,1);
     margin:50px auto
 }
 .rec h2{
-    font-size:30px;
+    font-size:2.5rem;
     padding:20px
 }
 
@@ -117,8 +214,10 @@ main{
 
 .rec a {
     margin:10px;
-    color:orangered;
+    color:rgba(255,69,0,1);
 }
+
+/*Survey*/
 
 form{
     width:600px;
@@ -126,14 +225,32 @@ form{
 }
 
 fieldset {
-    border:1px solid orangered;
+    border:1px solid rgba(255,69,0,1);
     padding:50px
 }
 
 legend {
     padding: 0.2em 0.5em;
-    border:1px solid orangered;
-    color:orangered;
-    font-size:90%;
+    border:1px solid rgba(255,69,0,1);
+    color:rgba(255,69,0,1);
+    font-size:0.9rem;
     text-align:right;
+}
+
+@media only screen and (min-width: 1510px) {
+    main section:nth-of-type(odd){
+        grid-column: 2/4;
+        grid-gap: 10px;
+
+    }
+    main section:nth-of-type(even){
+        grid-column: 4/6;
+        grid-gap: 10px;
+    }
+
+    #nav{display:block;}
+    [href="#open"]{
+        display:none;
+    }
+
 }
