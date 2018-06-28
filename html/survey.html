@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Survey</title>
     <link rel="stylesheet" href="../css">
 </head>
@@ -10,10 +10,11 @@
         <nav id="open">
             <img src="../img/header-logo.png" alt="nav-panda">
             <h1>Red Panda Blog</h1>
-            <ul>
+            <ul id="nav">
                 <li><a href="../index.html">Posts</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="recommendations.html">Recommendations</a></li>
+                <li><a href="survey.html" class="gameMenu disabled">Game</a></li>
             </ul>
             <div>
                 <a href="#open">Menu</a>
@@ -21,41 +22,48 @@
             </div>
             <div id="mobileMenu">
                 <ul>
-                    <li><a href="index.html">Posts</a></li>
-                    <li><a href="html/about.html">About Us</a></li>
-                    <li><a href="html/recommendations.html">Recommendations</a></li>
+                    <li><a href="../index.html">Posts</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="recommendations.html">Recommendations</a></li>
+                    <li><a class="gameMenu disabled" href="survey.html">Game</a></li>
                 </ul>
             </div>
         </nav>
         <img id="banner" src="../img/banner.png" alt="banner">
     </header>
     <main>
-        <form action="#" method="post">
+        <form action="" method="post">
             <fieldset>
                 <legend>Did you like the recent post</legend>
-                <label for="yes"> Yes</label>
-                <input type="radio" name="yes" id="yes"/>
-                <label for="no" >No</label>
-                <input type="radio" name="no" id="no">
+                    <label for="yes"> Yes</label>
+                    <input type="radio" name="check" id="yes" />
+                    <label for="no" >No</label>
+                    <input type="radio" name="check" id="no">
             </fieldset>
             <fieldset>
                 <legend>What Post do you want to see next ?</legend>
                 <label for="design">Skateboard Designs</label>
-                <input type="checkbox" name="design" id="design"/>
+                <input type="checkbox" name="next" id="design"/>
                 <label for="sneaker">Sneaker</label>
-                <input type="checkbox" name="sneaker" id="sneaker">
+                <input type="checkbox" name="next" id="sneaker">
                 <label for="tips">Production Tips</label>
-                <input type="checkbox" name="tips" id="tips">
+                <input type="checkbox" name="next" id="tips">
+                <label for="other">Other</label>
+                <input type="checkbox" name="next" id="other">
             </fieldset>
             <fieldset>
                 <legend>What Post do you want to see next ?</legend>
                 <label for="fName">First Name</label>
-                <input type="text" name="fName" id="fName"/>
+                <input type="text" name="user" id="fName" pattern="[a-zA-Z]*" required/>
                 <label for="email" >Email</label>
-                <input type="text" name="email" id="email"/>
+                <input type="text" name="user" id="email" pattern="[a-zA-Z]*" required/>
             </fieldset>
-            <input type="submit" name="submit_form"/>
+            <ul id="errorList">
+
+            </ul>
+            <input type="submit" name="submit_form" id="submit"/>
         </form>
     </main>
+    <script src="../js/form.js"></script>
 </body>
 </html>

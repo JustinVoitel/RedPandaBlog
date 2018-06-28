@@ -120,7 +120,7 @@ nav img{
 
 /*******POSTS MAIN*********/
 
-main{
+#block{
     margin-top:100px;
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -130,12 +130,12 @@ header{
     grid-column: 1/7;
 }
 
-main section:nth-of-type(odd){
+#block section:nth-of-type(odd){
     grid-column: 1/7;
     grid-gap: 10px;
 
 }
-main section:nth-of-type(even){
+#block section:nth-of-type(even){
     grid-column: 1/7;
     grid-gap: 10px;
 }
@@ -236,6 +236,32 @@ legend {
     font-size:0.9rem;
     text-align:right;
 }
+
+/*GAME*/
+
+.Game{
+    margin:100px
+}
+
+.Game div, .Game button{
+    display:inline-block;
+}
+
+.error{
+    color:#ff4500;
+}
+
+.disabled{
+    font-style:italic;
+    cursor: default;
+    color:lightgrey;
+}
+
+.enabled{
+    color:green;
+    font-weight:bold;
+}
+
 
 @media only screen and (min-width: 1510px) {
     main section:nth-of-type(odd){
