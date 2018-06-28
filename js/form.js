@@ -6,7 +6,6 @@ function validateForm(){
         checks=document.querySelectorAll('[type="checkbox"]'),
         radios=document.querySelectorAll('[type="radio"]'),
         form=document.querySelector('form');
-
     form.addEventListener('submit',function(e){enableGame();e.preventDefault();},false);
 
     function check(arr){
@@ -27,6 +26,7 @@ function validateForm(){
             const errorMsg = document.createTextNode("Error: Please click " + typeOfCheck);
             listItem.appendChild(errorMsg);
             errorList.appendChild(listItem);
+            //JS fragment
             return false
         }
         else{
@@ -37,14 +37,15 @@ function validateForm(){
         const checkbox = check(checks);
         const radio = check(radios);
         if(checkbox && radio){
-            console.log("game freigeschaltet");
-            let i = 0;
+
+            /*let i = 0;
             let arr = document.getElementsByClassName("gameMenu");
             let len=arr.length;
             for(i; i<len;i++){
                 arr[i].classList.remove("disabled");
-            }
+            }*/
             window.location.replace("game.html");
+
         }else{
 
         }

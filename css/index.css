@@ -254,12 +254,17 @@ legend {
 .disabled{
     font-style:italic;
     cursor: default;
+
     color:lightgrey;
 }
 
 .enabled{
     color:green;
     font-weight:bold;
+}
+
+.mirrored{
+    transform: scaleX(-1);
 }
 
 

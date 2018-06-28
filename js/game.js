@@ -2,8 +2,11 @@
 window.addEventListener('DOMContentLoaded', start,false);
 
 function start(){
+    player1 = document.getElementById("player1").children[1];
+    player2 = document.getElementById("player2").children[1];
     btn = document.getElementById("playGame");
     const data = ["schere","stein","papier"];
+    console.log(1, player1)
     let p1, p2, msg, win;
 
     btn.addEventListener('click',function(e){init();e.preventDefault();},false);
@@ -15,6 +18,9 @@ function start(){
         msg = "";
         win = false;
         document.getElementById("p1").textContent = data[p1];
+        //add image
+        player1.setAttribute("src",`../img/${data[p1]}.png`);
+        player2.setAttribute("src",`../img/${data[p2]}.png`);
         document.getElementById("p2").textContent = data[p2];
         calcWinner();
     }

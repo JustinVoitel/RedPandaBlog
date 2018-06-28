@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>Red Panda Blog</title>
     <link rel="stylesheet" type="../text/css" href="../css/normalize.css"/>
-    <link rel="stylesheet" href="../css">
+    <link rel="stylesheet" href="../css/index.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
 
@@ -37,10 +37,17 @@
 </header>
 <main>
     <section class="Game">
-        <div><p id="p1">Player 1</p></div>
+        <div id="player1">
+            <p id="p1">You</p>
+            <img src="#" alt="">
+        </div>
         <button id="playGame">play</button>
-        <div><p id="p2">Player 2</p></div>
+        <div id="player2">
+            <p id="p2">Opponent</p>
+            <img src="#" class="mirrored" alt="">
+        </div>
         <p id="message">press play!</p>
+
     </section>
 </main>
 <script src="../js/game.js"></script>
